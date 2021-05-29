@@ -49,7 +49,8 @@ screen -S fastapi
 
 
 
-​	【注意：针对Linux或者没有Anaconda3】使用包管理工具`pip`安装所需模块
+​	【注意：针对Linux或者没有Anaconda3】使用包管理工具`pip`安装所需模块,
+可以自行百度虚拟环境在linux中的操作，激活虚拟环境再安装如下包，再运行主程序
 
 ```bash
 pip install requests
@@ -68,7 +69,7 @@ pip install uvicorn[standard]
 - 开启运行程序
 
   ```python
-  uvicorn main:app --reload  ##默认端口为8080，防止端口冲突
+  python main.py  ##默认端口为8080，防止端口冲突,需要被外部访问需要将main.py源码中的host改为 '0.0.0.0'
   ```
 
   The command `uvicorn main:app` refers to:
